@@ -19,12 +19,11 @@ class PostList extends Component{
 				{console.log('post', this.props.posts)}
 				<h1>Welcome to the App!</h1>
 				{this.props.posts.map(post => {
-					return <div>{post.title}</div>
+					return <PostListItem 
+						key={post._id}
+						post={post}
+					/>
 				})}
-				{/* <p>
-				<Link to="/todos">See my todos!</Link>
-				</p>
-				//<Route exact={true} path="/posts" component={() => <div>{posts}</div>} /> */}
 			</div>
 		);
 	}

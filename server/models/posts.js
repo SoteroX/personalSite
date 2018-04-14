@@ -5,7 +5,7 @@ const postSchema = new mongoose.Schema({
 		categories: [String],
 		content: String,
 		authorId: String,
-		autherName: String,
+		authorName: String,
 });
 
 const Posts = mongoose.model('Posts', postSchema);

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const PostListItem = ({id, content, title, authorName}) => (
+const PostListItem = (props) => (
 	<div>
-		<Link to={`/api/posts/edit/${id}`}>
-			<h3>title {title}</h3>
-		</Link>
-		<p>Name: {authorName}</p>
-		<p>content: {content}</p>
+		<Link to={"/blog/" + props.post._id}> 
+			<p>Title: {props.post.title} </p> 
+		</Link> 
+
+		<p>Name: {props.post.authorName} </p> 
 	</div>
 );
 

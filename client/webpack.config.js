@@ -34,6 +34,9 @@ module.exports = (env) => {
           }
         ]
       })
+    }, {
+      loader: 'url-loader',
+      test: /\.(png|jpg|gif)$/
     }]
   },
   plugins:[

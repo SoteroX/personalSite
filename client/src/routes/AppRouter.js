@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import HomePage from '../components/HomePage';
 import BlogPage from '../components/BlogPage';
 import NavBar from '../components/NavBar';
-import PostList from '..//components/PostList';
-import * as actions from '../actions/blogs';
+import PostPage from '../components/PostPage';
+import PostList from '../components/PostList';
 
 class AppRouter extends React.Component {
 	constructor(props){
@@ -18,6 +18,7 @@ class AppRouter extends React.Component {
 					<Switch>
 						<Route path="/" component={HomePage} exact={true} />
 						<Route path='/blog' component={BlogPage} exact={true} />
+						<Route path='/blog/:id' component={PostPage} exact={true} />
 					</Switch>
 				</div>
 		);

@@ -5,9 +5,9 @@
   "main": "index.js",
   "proxy": "http://localhost:3001",
   "scripts": {
-    "build:dev": "webpack",
+    "build:dev": "webpack --mode=development",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server --mode=development"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
     "validator": "^9.4.1",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13"

@@ -7,14 +7,14 @@ var data = [
             categories: ["web", 'react', 'redux'],
             content: "gddhfffhsfhfghgfmhkgfmhsfkhmhgkfsh",
             authorId: "123456",
-            autherName: "Sotero",
+            authorName: "Sotero",
         },
         {
             title: "random title 2",
             categories: ["hat", 'cat', 'redux'],
             content: "gddhfffhfdfgdkfhmsdfkmskhmfkmdkfhfghgfmhkgfmhsfkhmhgkfsh",
             authorId: "12",
-            autherName: "test",
+            authorrName: "test",
         },
     ]
 
