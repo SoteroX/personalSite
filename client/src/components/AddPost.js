@@ -23,7 +23,7 @@ class AddPost extends Component {
 
     onAuthorChange(e) {
         const author = e.target.value;
-        this.setState(() => ({AuthorName: author}));
+        this.setState(() => ({authorName: author}));
     };
      onContentChange(e){
         const content = e.target.value;

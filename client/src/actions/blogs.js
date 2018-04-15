@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const GET_POSTS = "GET_POSTS";
 export const GET_POST = 'GET_POST';
 export const ADD_POST = 'ADD_POST';
@@ -25,32 +23,6 @@ function handleAdd(data){
 		data
 	};
 }
-
-// export function addPost(post){
-// 	console.log("data being passed", post);
-// 	const text = JSON.stringify({post});
-
-// 	// const request = axios.post('http://localhost:3000/api/posts',post);
-// 	// request
-// 	// .then(res => handleAdd(res))
-// 	// .catch(err => console.log("ERROR", err));
-
-
-// 	return dispatch => {
-// 		const request = axios.post('http://localhost:3000/api/posts',{
-// 			body: {
-// 				title: "hello"
-// 			}
-// 		})
-// 		//.then(res => console.log("res: ",res))
-// 		.then(res => dispatch(handleAdd(res)))
-// 		.catch(err => console.log(err))
-
-// 	// return {
-// 	// 	type: ADD_POST,
-// 	// 	payload: 
-// 	// };
-// }}
 
 export function addPost(task){
 	console.log("data being passed", task);
