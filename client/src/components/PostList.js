@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getPosts } from '../actions/blogs';
 import PostListItem from './PostListItem';
-import { Route, Link } from "react-router-dom";
+
 
 
 class PostList extends Component{
@@ -18,9 +18,9 @@ class PostList extends Component{
 			<div>
 				{console.log('post', this.props.posts)}
 				<h1>Welcome to the App!</h1>
-				{this.props.posts.map(post => {
+				{this.props.posts.map((post, index) => {
 					return <PostListItem 
-						key={post._id}
+						key={index}
 						post={post}
 					/>
 				})}

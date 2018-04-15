@@ -13,7 +13,7 @@ class PostPage extends Component {
         return (
             <div>PostPage
                 {console.log("PostPage Props", this.props.match.params.id)}
-                {console.log("PostPage title", this.props.post.title)}
+                <p>Title: {this.props.post.title}</p>
             </div>
         );
     }

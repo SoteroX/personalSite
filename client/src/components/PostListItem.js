@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const PostListItem = (props) => (
 	<div>
-		<Link to={"/blog/" + props.post._id}> 
+		<NavLink to={"/blog/" + props.post._id} exact={true}> 
 			<p>Title: {props.post.title} </p> 
-		</Link> 
+		</NavLink> 
 
 		<p>Name: {props.post.authorName} </p> 
 	</div>
