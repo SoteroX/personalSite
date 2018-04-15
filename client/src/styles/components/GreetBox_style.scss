@@ -2,7 +2,7 @@
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	margin: 16%;
     text-align: center;
-    //background-color: rgba($color: #434343, $alpha: .6);
+    background-color: rgba($color: #434343, $alpha: .5);
 	opacity: inherit;
 	padding: 12px;
     color: snow;;
@@ -16,4 +16,12 @@
 
 .infoBox h1 {
 	margin-bottom: auto;
+}
+
+.btn {
+	padding: 10px;
+	z-index: 1;
+	background-color: rgba(122,111,98, .6);
+    color: white;
+    border: none;
 }

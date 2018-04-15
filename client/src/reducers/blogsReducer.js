@@ -14,7 +14,6 @@ export default function blogsReducer(state = initialState, action){
             return { ...state, post: action.data}
         case ADD_POST: 
             console.log("action.data", action);
-            debugger;
             return { ...state, posts: [...state.posts, action.data]}
         default:
             return state;

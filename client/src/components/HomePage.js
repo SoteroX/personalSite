@@ -9,7 +9,6 @@ class HomePage extends React.Component {
 		return(
 			<div className="page-background">
 				<GreetBox />
-				<button>Read On</button>
 			</div>
 		);
 	};

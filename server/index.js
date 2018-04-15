@@ -8,13 +8,14 @@ const express = require('express'),
 			mongoose = require('mongoose'),
 			seedDB	= require('./seeds'),
 			postRoutes = require('./routes/posts');
-			// Posts	= require('./models/posts');
+		    //Posts	= require('./models/posts');
 
 mongoose.connect("mongodb://localhost/blogs-backend");
 mongoose.set("debug", true);
 mongoose.Promise = Promise;
 
 app.use(morgan('tiny'));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 //app.set("view engine", "ejs");
@@ -24,10 +25,13 @@ app.use(expressSanitizer());
 app.use(methodOverride("_method"));
 seedDB();
 
+// allow-cors
+app.use(function(req,res,next){
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+  })
 
-app.get('/', function(req, res){
-    res.sendFile("index.html");
-});
 
 app.use('/api/posts', postRoutes);
 
@@ -38,11 +42,10 @@ app.use('/api/posts', postRoutes);
 // 	Posts.find({}, function(err,post){
 // 		if(err){
 // 			console.log("ERROR FINDING POST")
-// 		} else{
-// 			console.log(post);
 // 		}
-// 	});
-// 	res.send("Finish");
+// 	})
+// 	.then(post => res.send(post))
+// 	.catch(err => console.log('Err:',err));
 // });
 
 // //get single post
@@ -50,15 +53,22 @@ app.use('/api/posts', postRoutes);
 // 	Posts.findById(req.params.id, function(err, foundPost){
 // 		if(err){
 // 			console.log('Error finding single post');
-// 		} else {
-// 			console.log("found single posts: ", foundPost)
 // 		}
-// 	});
+// 	})
+// 	.then(foundPost => res.send(foundPost))
+// 	.catch(err => console.log('Err:',err));
 // });
 
 // //add post
-// app.post("/api/posts/:id", function(req,res) {
-
+// app.post("/api/posts", function(req,res) {
+// 	console.log("REq body", req.body)
+// 	Posts.create(req.body.post, function(err, newPost){
+// 		if(err){
+// 			console.log('err', err)
+// 		} else { 
+// 			res.redirect('/api/posts')
+// 		}
+// 	})	
 // });
 
 // //edit post

@@ -35,6 +35,11 @@ class AddPost extends Component {
         let newState = this.state;
         console.log("E:", newState);
         this.props.addPost(newState);
+        this.setState({
+            authorName: "",
+            content: "",
+            title: ""
+        });
     }
     render(){
         return(
@@ -44,7 +49,7 @@ class AddPost extends Component {
                     <h3>Title</h3>
                     <input value={this.state.title} type="text" placeholder="Title" onChange={this.onTitleChange}/>
                     <h3>Author</h3>
-                    <input value={this.state.AuthorName} type="text" placeholder="Author" onChange={this.onAuthorChange} />
+                    <input value={this.state.authorName} type="text" placeholder="Author" onChange={this.onAuthorChange} />
                     <h3>Description</h3>
                     <input value={this.state.content} type="text" placeholder= "Content" onChange={this.onContentChange} />
                     <button onClick={this.handleSubmit}>Add Post</button>  

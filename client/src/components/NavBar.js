@@ -3,10 +3,13 @@ import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => (
-	<header>
-		<NavLink to='/' activeClassName='is-active' exact={true}>Home</NavLink>
-		<NavLink to='/blog' activeClassName='is-active' exact={true}>Blog</NavLink>
-	</header>
+		<ul className="navbar">
+		<header>
+			<li><NavLink to='/' activeClassName='is-active' exact={true}>Home</NavLink></li>
+			<li><NavLink to='/blog' activeClassName='is-active' exact={true}>Blog</NavLink></li>
+		</header>
+		</ul>
+
 );
 
 export default NavBar;

@@ -14,6 +14,7 @@ class PostPage extends Component {
             <div>PostPage
                 {console.log("PostPage Props", this.props.match.params.id)}
                 <p>Title: {this.props.post.title}</p>
+                <p>Content: {this.props.post.content}</p>
             </div>
         );
     }
