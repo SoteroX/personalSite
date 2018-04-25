@@ -19,34 +19,20 @@ var data = [
     ]
 
 function seedDB(){
-    //Remove all campgrounds
+    //Remove all posts
     Posts.remove({}, function(err){
         if(err){
             console.log("ERROR...Posts couldnt be removed");
         } else {
-           console.log("Posts campgrounds!"); 
+           console.log("All post removed!"); 
         }
-        //ADD FEW CAMPGROUNDS
+        //ADD FEW posts
         data.forEach(function(seed){
             Posts.create(seed, function(err, post){
                 if(err){
                     console.log(err);
                 } else {
                     console.log("Posts Added");
-                    // //ADD Few Comments
-                    // Comment.create(
-                    //     {
-                    //         text: "This place is great",
-                    //         author: "Homer"
-                    //     }, function(err, comment){
-                    //         if(err){
-                    //             console.log(err);
-                    //         } else {
-                    //             campground.comments.push(comment);
-                    //             campground.save();
-                    //             console.log("Created new comment");
-                    //         }
-                    //     });
                 }
             });
         });
